@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+/*
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  !*Neutral*!
+
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 100%);;
+}
+
+.wrapper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.notification-container {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifications {
+  display: flex;
+}
+
+.notification-name {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.notification-card-number {
+  height: 30px;
+  width: 32px;
+  padding: 5px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  background-color: hsl(219, 85%, 26%);
+  display: flex;
+  justify-content: center;
+}
+
+.card-number {
+  font-weight: 400;
+}
+
+.btn-notification {
+  font-size: 14px;
+  padding: 5px;
+  color: hsl(219, 12%, 42%);
+}
+
+.btn-notification:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.container-cards {
+}
+
+.card {
+  padding: 10px;
+  margin: 10px 0;
+  width: 345px;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-active {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.card-img {
+  margin: 10px;
+}
+
+.card-img-p {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.card-img-p:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrapper {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.img-wrapper-posted {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.card-status {
+  margin: 5px 10px 5px 10px;
+  flex-wrap: wrap;
+}
+
+.card-name {
+  margin: auto 5px auto auto;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.card-name:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.reaction {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reaction-option {
+  color: hsl(219, 12%, 42%);
+  margin: auto 0;
+  font-size: 12px;
+}
+
+.title {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+  margin: auto 5px;
+  font-size: 12px;
+}
+
+.title:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.group {
+  font-size: 14px;
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+
+.status {
+  margin: auto;
+}
+
+.status-active {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: hsl(1, 90%, 64%);
+  margin: auto;
+}
+
+.time {
+  color: hsl(219, 14%, 63%);
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+.message-card {
+  color: hsl(219, 12%, 42%);
+  font-size: 12px;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+  padding: 15px 30px 15px 15px;
+}
+
+.message-card:hover {
+  background-color: hsl(205, 33%, 90%);
+  cursor: pointer;
+}
+
+.message-active {
+  border-radius: 5px;
+  border: 1px solid hsl(205, 33%, 90%);
+}
+
+.card-message-active {
+  height: 215px;
+  margin-bottom: 10px;
+}
+
+.card-message-inactive {
+  height: 100px;
+}
+
+@media (min-width: 1220px) {
+  body {
+    background-color: hsl(210, 60%, 98%);
+  }
+
+  .wrapper-container {
+    min-height: 100vh;
+    padding: 60px;
+    /*background-color: black;*/
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: hsl(0, 0%, 100%);
+    width: 660px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .notification-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container-cards {
+    padding: 20px;
+  }
+
+  .card {
+    margin: 10px 0;
+    width: 600px;
+  }
+
+  .card-message-active {
+    height: 145px;
+  }
+
+  .card-message-inactive {
+    height: 75px;
+  }
+
+  .img-wrapper-posted {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    left: 500px;
+  }
+}

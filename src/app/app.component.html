@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="wrapper-container">
+    <div class="container">
+      <div class="notification-container">
+        <div class="notifications">
+          <p class="notification-name">Notifications</p>
+          <div class="notification-card-number">
+            <p class="card-number">{{notifications}}</p>
+          </div>
+        </div>
+
+
+        <p class="btn-notification" (click)="markAllRead()">Mark all as read</p>
+      </div>
+
+      <div class="container-cards">
+        <div id="card1" (click)="changeStatus('card1')" class="card card-message-inactive card-active">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-mark-webber.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Mark Webber</label>
+              <label class="reaction-option">reacted to your recent post</label>
+              <label class="title">My first tournament today!</label>
+              <img id="card1Img" class="status status-active">
+            </p>
+            <div class="time">1m ago</div>
+          </div>
+
+
+        </div>
+
+        <div id="card2" (click)="changeStatus('card2')" class="card card-message-inactive card-active">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-angela-gray.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Angela Gray</label>
+              <label class="reaction-option">followed you</label>
+              <label class="title"></label>
+              <img id="card2Img" class="status status-active">
+            </p>
+            <div class="time">5m ago</div>
+          </div>
+
+
+        </div>
+
+        <div id="card3" (click)="changeStatus('card3')" class="card card-message-inactive card-active">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-jacob-thompson.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Jacob Thompson</label>
+              <label class="reaction-option">has joined your group</label>
+              <label class="title group">Chess Club</label>
+              <img id="card3Img" class="status status-active">
+            </p>
+            <div class="time">1 day ago</div>
+          </div>
+
+
+        </div>
+
+        <div id="card4" (click)="changeStatus('card4')" class="card card-message-active">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-rizky-hasanuddin.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Rizky Hasanuddin</label>
+              <label class="reaction-option">sent you a private message</label>
+              <label class="title"></label>
+              <img id="card4Img" class="status">
+            </p>
+            <div class="time">5 days ago</div>
+            <div class="message-card message-active">
+              <p>Hello, thanks for setting up the Chess Club. I've been
+                a member for a few weeks now and I'm already having lots
+                of fun and improving my game.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="card5" (click)="changeStatus('card5')" class="card card-message-inactive">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-kimberly-smith.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Kimberly Smith</label>
+              <label class="reaction-option">commented on your picture</label>
+              <label class="title"></label>
+              <img id="card5Img" class="status">
+            </p>
+            <div class="time">1 week ago</div>
+          </div>
+          <div class="card-img-p">
+            <img class="img-wrapper-posted" src="../assets/images/image-chess.webp" alt="person">
+          </div>
+
+        </div>
+
+        <div id="card6" (click)="changeStatus('card6') "class="card card-message-inactive">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-nathan-peterson.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Nathan Peterson</label>
+              <label class="reaction-option">reacted to your recent post</label>
+              <label class="title">5 end-game strategies to increase your win rate</label>
+              <img id="card6Img" class="status">
+            </p>
+            <div class="time">2 weeks ago</div>
+          </div>
+
+
+        </div>
+
+        <div id="card7" (click)="changeStatus('card7')" class="card card-message-inactive">
+          <div class="card-img">
+            <img class="img-wrapper" src="../assets/images/avatar-anna-kim.webp" alt="person">
+          </div>
+          <div class="card-details">
+            <p class="card-status">
+              <label class="card-name">Anna Kim</label>
+              <label class="reaction-option">left the group</label>
+              <label class="title group">Chess Club</label>
+              <img id="card7Img" class="status">
+            </p>
+            <div class="time">2 weeks ago</div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</main>
+
+<!--<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</div>-->
+</body>
+</html>
