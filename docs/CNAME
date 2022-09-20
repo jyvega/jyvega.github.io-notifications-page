@@ -1,1 +1,4 @@
-www.jyvega.sites.io
+;www.jyvega.sites.io.                     IN      A
+www.jyvega.sites.io.              3592    IN      CNAME   jyvega.github.io.
+jyvega.github.io.      43192   IN      CNAME    GITHUB-PAGES-SERVER .
+GITHUB-PAGES-SERVER .         22      IN      A       192.0.2.1
