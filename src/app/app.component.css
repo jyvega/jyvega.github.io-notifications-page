@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
-/*
-:root {
+
+/*:root {
   --Red: hsl(1, 90%, 64%);
   --blue: hsl(219, 85%, 26%);
 
@@ -13,7 +13,19 @@
   --Grayish-blue: hsl(219, 14%, 63%);
   --Dark-grayish-blue: hsl(219, 12%, 42%);
   --Very-dark-blue: hsl(224, 21%, 14%);
+
 }*/
+
+.attribution {
+  color: hsl(219, 14%, 63%);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(219, 12%, 42%);
+}
 
 * {
   padding: 0;
@@ -272,5 +284,12 @@ body {
     width: 42px;
     position: absolute;
     left: 500px;
+  }
+
+  .attribution {
+    color: hsl(219, 14%, 63%);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
   }
 }
